@@ -122,9 +122,9 @@ npm run test
 
 # Dokumentacja API
 
-**GET** - /api/movies - pobiera wszystkie filmy
-**POST** - /api/movies - dodaje film
-**DELETE** - /api/movies/:id - usuwa film**
+### GET **/api/movies** - pobiera wszystkie filmy
+### POST ** /api/movies** - dodaje film
+### DELETE ** /api/movies/:id** - usuwa film
 
 # Testy manualne
 
