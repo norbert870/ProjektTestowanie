@@ -1,18 +1,20 @@
-# Temat projektu  
-**Movie Watchlist Manager — aplikacja React do zarządzania listą filmów do obejrzenia**
+# Nazwa kursu
+Testowanie i Jakość Oprogramowania
 
----
+# Autor
+Norbert Szopa 32620
+
+# Temat projektu  
+Aplikacja do zarządzania filmami do obejrzenia
 
 # Opis projektu  
 
-Movie Watchlist Manager to aplikacja frontendowa stworzona w **React**, której celem jest umożliwienie użytkownikowi zarządzania listą filmów do obejrzenia (watchlist).  
+Aplikacja frontendowa stworzona w **React**, której celem jest umożliwienie użytkownikowi zarządzania listą filmów do obejrzenia.  
 Użytkownik może:
 
 - dodawać filmy do listy,
 - usuwać filmy z listy,
 - przeglądać aktualną listę,
-- korzystać z automatycznej walidacji tytułów,
-- pracować na stanie globalnym dzięki Context API.
 
 Dodatkowo projekt zawiera:
 
@@ -21,8 +23,6 @@ Dodatkowo projekt zawiera:
 ✔ 10 przypadków testowych dla testera manualnego  
 ✔ dokumentację API  
 ✔ czytelny podział na komponenty i warstwy logiki
-
----
 
 # Uruchamianie projektu
 
@@ -104,9 +104,9 @@ Poniżej znajdują się testy integracyjne dla projektu „Zarządzanie filmami�
 
 # Dokumentacja API
 
-GET /api/movies pobierz wszystkie filmy lista filmów
-POSt /api/movies dodaj film { title: string } nowy film
-DELETE /api/movies/:id usuń film usunięty film
+GET | /api/movies | pobiera wszystkie filmy
+POST | /api/movies | dodaje film
+DELETE | /api/movies/:id | usuwa film 
 
 # Testy manualne
 
@@ -130,4 +130,3 @@ CSS3
 React JS
 React Testing Library
 Javascript
-Context API
