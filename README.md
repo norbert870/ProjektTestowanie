@@ -34,32 +34,50 @@ npm install
 npm start
 npm run test
 
-# Testy jednostkowe
+## Testy jednostkowe
 
-| `AddMovie` | `src/tests/unit/AddMovie.test.jsx` | addMovie zwraca nowy film |
+### 1. AddMovie 
+**Plik:** `src/tests/unit/AddMovie.test.jsx` 
+**Opis:** addMovie zwraca nowy film 
 
-| `AddMovieFromMovieForm` | `src/tests/unit/AddMovieFromMovieForm.test.jsx` | MovieForm wywołuje addMovie po wprowadzeniu tytułu i kliknięciu Dodaj |
+### 2. AddMovieFromMovieForm 
+**Plik:** `src/tests/unit/AddMovieFromMovieForm.test.jsx` 
+**Opis:** MovieForm wywołuje addMovie po wprowadzeniu tytułu i kliknięciu Dodaj 
 
-| `DeleteMovie` | `src/tests/unit/DeleteMovie.test.jsx` | deleteMovie wywołuje fetch z metodą DELETE |
+### 3. DeleteMovie 
+**Plik:** `src/tests/unit/DeleteMovie.test.jsx` 
+**Opis:** deleteMovie wywołuje fetch z metodą DELETE 
 
-| `FetchMovies` | `src/tests/unit/FetchMovies.test.jsx` | fetchMovies zwraca filmy z API |
+### 4. FetchMovies 
+**Plik:** `src/tests/unit/FetchMovies.test.jsx` 
+**Opis:** fetchMovies zwraca filmy z API
 
-| `Home` | `src/tests/unit/Home.test.jsx` | Home renderuje tytuł strony |
+### 5. Home 
+**Plik:** `src/tests/unit/Home.test.jsx` 
+**Opis:** Home renderuje tytuł strony 
 
-| `MovieForm` | `src/tests/unit/MovieForm.test.jsx` | MovieForm pokazuje błąd przy pustym tytule |
+### 6. MovieForm 
+**Plik:** `src/tests/unit/MovieForm.test.jsx` 
+**Opis:** MovieForm pokazuje błąd przy pustym tytule 
 
-| `MovieFormAdd` | `src/tests/unit/MovieFormAdd.test.jsx` | MovieForm dodaje film i czyści input |
+### 7. MovieFormAdd
+**Plik:** `src/tests/unit/MovieFormAdd.test.jsx` 
+**Opis:** MovieForm dodaje film i czyści input 
 
-| `MovieItemDelete` | `src/tests/unit/MovieItemDelete.test.jsx` | MovieItem usuwa film po kliknięciu |
+### 8. MovieItemDelete
+**Plik:** `src/tests/unit/MovieItemDelete.test.jsx` 
+**Opis:** MovieItem usuwa film po kliknięciu 
 
-| `MovieListCounter` | `src/tests/unit/MovieListCounter.test.jsx` | MovieList pokazuje filmy i licznik |
+### 9. MovieListCounter 
+**Plik:** `src/tests/unit/MovieListCounter.test.jsx` 
+**Opis:** MovieList pokazuje filmy i licznik
 
-| `MovieListFilter` | `src/tests/unit/MovieListFilter.test.jsx` | MovieList filtruje listę filmów |
+### 10. MovieListFilter 
+**Plik:** `src/tests/unit/MovieListFilter.test.jsx` 
+**Opis:** MovieList filtruje listę filmów 
 
 
 ## Testy integracyjne
-
-Poniżej znajdują się testy integracyjne dla projektu „Zarządzanie filmami”. Wszystkie testy napisane są w konwencji **AAA** (Arrange, Act, Assert) i wykorzystują **React Testing Library** oraz **MSW** do mockowania API.
 
 ### 1. AddAndRefresh
 **Plik:** `src/tests/integration/.AddAndRefresh.jsx`  
@@ -110,23 +128,61 @@ DELETE | /api/movies/:id | usuwa film
 
 # Testy manualne
 
-| ID | Tytul | warunki poczatkowe | kroki testowe | oczekiwany rezultat |
-| TC01 | Dodanie nowego filmu | Aplikacja uruchomiona, lista filmów pusta | 1. Wpisz tytuł filmu w polu input. 2. Kliknij przycisk „Dodaj”. | Film pojawia się w liście filmów. Pole input zostaje wyczyszczone. |
-| TC02 | Dodanie kilku filmów | Aplikacja uruchomiona, lista filmów pusta | 1. Dodaj film „Matrix”. 2. Dodaj film „Inception”. | Oba filmy pojawiają się w liście filmów w kolejności dodania. |
-| TC03 | Usunięcie filmu | Lista zawiera co najmniej jeden film | 1. Kliknij przycisk „Usuń” przy wybranym filmie. | Film zostaje usunięty z listy. Pozostałe filmy pozostają. | 
-| TC04 | Nie dodawanie pustego tytułu | Aplikacja uruchomiona | 1. Kliknij „Dodaj” bez wpisywania tytułu. | Film nie zostanie dodany. Lista pozostaje bez zmian. |
-| TC05 | Nie dodawanie tytułu z samych spacji | Aplikacja uruchomiona | 1. Wpisz w polu input kilka spacji. 2. Kliknij „Dodaj”. | Film nie zostanie dodany. Lista pozostaje bez zmian. |
-| TC06 | Zablokowanie duplikatu | Lista zawiera film „Matrix” | 1. Wpisz „Matrix” w polu input. 2. Kliknij „Dodaj”. | Film nie zostanie dodany ponownie. Lista zawiera tylko jeden wpis „Matrix”. |
-| TC07 | Wyświetlanie komunikatu dla pustej listy | Lista filmów pusta | - | Zamiast listy wyświetla się komunikat „Brak filmów na liście.” |
-| TC08 | Pole input resetuje się po dodaniu | Lista filmów pusta | 1. Wpisz tytuł filmu w polu input. 2. Kliknij „Dodaj”. | Pole input zostaje wyczyszczone po dodaniu filmu. |
-| TC09 | Dodawanie filmu z obcietymi spacjami | Lista filmów pusta | 1. Wpisz „ Matrix ” w polu input. 2. Kliknij „Dodaj”. | Film pojawia się w liście jako „Matrix” (bez spacji na początku i końcu). |
-| TC10 | Usunięcie jednego filmu spośród wielu | Lista zawiera filmy „Matrix” i „Inception” | 1. Kliknij „Usuń” przy filmie „Matrix”. | Film „Matrix” zostaje usunięty. Film „Inception” pozostaje na liście. |
+### TC01 Dodanie nowego filmu 
+**Warunki początkowe:** Aplikacja uruchomiona, lista filmów pusta 
+**Kroki testowe:** 1. Wpisz tytuł filmu w polu input. 2. Kliknij przycisk „Dodaj”. 
+**Oczekiwany rezultat:** Film pojawia się w liście filmów. Pole input zostaje wyczyszczone.
+
+### TC02 Dodanie kilku filmów 
+**Warunki początkowe:** Aplikacja uruchomiona, lista filmów pusta 
+**Kroki testowe:** 1. Dodaj film „Matrix”. 2. Dodaj film „Inception”. 
+**Oczekiwany rezultat:** Oba filmy pojawiają się w liście filmów w kolejności dodania.
+
+### TC03 Usunięcie filmu 
+**Warunki początkowe:** Lista zawiera co najmniej jeden film
+**Kroki testowe:** 1. Kliknij przycisk „Usuń” przy wybranym filmie. 
+**Oczekiwany rezultat:** Film zostaje usunięty z listy. Pozostałe filmy pozostają. 
+
+### TC04 Nie dodawanie pustego tytułu 
+**Warunki początkowe:** Aplikacja uruchomiona 
+**Kroki testowe:** 1. Kliknij „Dodaj” bez wpisywania tytułu. 
+**Oczekiwany rezultat:** Film nie zostanie dodany. Lista pozostaje bez zmian.
+
+### TC05 Nie dodawanie tytułu z samych spacji
+**Warunki początkowe:** Aplikacja uruchomiona 
+**Kroki testowe:** 1. Wpisz w polu input kilka spacji. 2. Kliknij „Dodaj”. 
+**Oczekiwany rezultat:** Film nie zostanie dodany. Lista pozostaje bez zmian.
+
+### TC06 Zablokowanie duplikatu
+**Warunki początkowe:** Lista zawiera film „Matrix” 
+**Kroki testowe:** 1. Wpisz „Matrix” w polu input. 2. Kliknij „Dodaj”. 
+**Oczekiwany rezultat:** Film nie zostanie dodany ponownie. Lista zawiera tylko jeden wpis „Matrix”.
+
+### TC07 Wyświetlanie komunikatu dla pustej listy 
+**Warunki początkowe:** Lista filmów pusta 
+**Kroki testowe:** - 
+**Oczekiwany rezultat:** Zamiast listy wyświetla się komunikat „Brak filmów na liście.” 
+
+### TC08 Pole input resetuje się po dodaniu 
+**Warunki początkowe:** Lista filmów pusta 
+**Kroki testowe:** 1. Wpisz tytuł filmu w polu input. 2. Kliknij „Dodaj”. 
+**Oczekiwaby rezultat:**  Pole input zostaje wyczyszczone po dodaniu filmu.
+
+### TC09 Dodawanie filmu z obcietymi spacjami 
+**Warunki początkowe:** Lista filmów pusta
+**Kroki testowe:** 1. Wpisz „ Matrix ” w polu input. 2. Kliknij „Dodaj”. 
+**Oczekiwany rezultat:** Film pojawia się w liście jako „Matrix” (bez spacji na początku i końcu).
+
+### TC10 Usunięcie jednego filmu spośród wielu
+**Warunki początkowe:** Lista zawiera filmy „Matrix” i „Inception” 
+**Kroki testowe:** 1. Kliknij „Usuń” przy filmie „Matrix”. 
+**Oczekiwany rezultat:** Film „Matrix” zostaje usunięty. Film „Inception” pozostaje na liście.
 
 
 # Technologie uzyte w projekcie
 
-HTML5
-CSS3
-React JS
-React Testing Library
+HTML5,
+CSS3,
+React JS,
+React Testing Library,
 Javascript
