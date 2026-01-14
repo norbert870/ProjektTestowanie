@@ -2,7 +2,7 @@
 Testowanie i Jakość Oprogramowania
 
 # Autor
-Norbert Szopa 32620
+Norbert Szopa
 
 # Temat projektu  
 Aplikacja do zarządzania filmami do obejrzenia
@@ -123,8 +123,8 @@ npm run test
 # Dokumentacja API
 
 ### GET **/api/movies** - pobiera wszystkie filmy
-### POST ** /api/movies** - dodaje film
-### DELETE ** /api/movies/:id** - usuwa film
+### POST **/api/movies** - dodaje film
+### DELETE **/api/movies/:id** - usuwa film
 
 # Testy manualne
 
